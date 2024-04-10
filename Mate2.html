@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Math: Task 2</title>
+    <style>
+      p {
+        color: blue;
+        margin: .5em 10;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+
+    <section class="preview">
+
+
+
+    </section>
+
+  </body>
+  <script>
+    // Final result should be 4633.33
+    // Add/update your code here
+
+    let result = 7 + 13 / 9 + 7;
+    let result2 = 100 / 2 * 6;
+
+    result = result * result2; // Multiplica result y result2 y asigna el resultado a result
+
+    let finalResult = result.toFixed(2); // Formatea result con dos decimales y almacena el resultado en finalResult
+
+    let finalNumber = parseFloat(finalResult); // Convierte finalResult a un número y almacena el resultado en finalNumber
+
+    // Don't edit the code below here!
+
+    const section = document.querySelector('section');
+
+    const para1 = document.createElement('p');
+    para1.textContent = `Your finalResult is ${ finalResult }`;
+    const para2 = document.createElement('p');
+    const finalNumberCheck = isNaN(finalNumber) === false ? 'finalNumber is a number type. Well done!' : `Ooops! finalNumber is not a number.`;
+    para2.textContent = finalNumberCheck;
+
+    section.appendChild(para1);
+    section.appendChild(para2);
+  </script>
+
+</html>
